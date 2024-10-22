@@ -1,0 +1,21 @@
+<nav class="navbar fixed-bottom mx-auto">
+    <div class="container d-flex justify-content-center align-items-center">
+      <ul class="container d-flex justify-content-between align-items-center pt-3">
+        <li class="navbar__item">
+          <a routerLink="" class="navbar__link"><i class="fas fa-home"></i></a>
+        </li>
+        <li class="navbar__item">
+          <a href="#" class="navbar__link"><i class="fas fa-comment-alt"></i></a>
+        </li>
+        <li class="navbar__item">
+          <a href="#" class="navbar__link"><i class="fas fa-users"></i></a>
+        </li>
+        <li *ngIf="tokenExists" class="navbar__item">
+          <a routerLink="/userprofile" class="navbar__link"><i class="fa fa-user-circle"></i></a>
+        </li>
+        <li *ngIf="!tokenExists" class="navbar__item">
+          <a routerLink="/login" class="navbar__link"><i class="fa fa-user-circle"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>

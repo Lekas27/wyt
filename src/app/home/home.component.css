@@ -1,0 +1,10 @@
+.text-gold {
+  color: #FFD700; /* Gold color */
+}
+
+.border-gold {
+  border-color: #FFD700; /* Gold color for borders */
+}
+.username{
+  font-size: larger;
+}

@@ -1,0 +1,14 @@
+<div class="container mt-5 d-flex justify-content-center">
+    <div *ngIf="tokenExists" class="card profile-card">
+      <div class="card-body">
+        <h2 class="card-title text-center">User Profile</h2>
+        <p><strong>Username:</strong> {{ userData.username }}</p>
+        <p><strong>Email:</strong> {{ userData.email }}</p>
+      </div>
+    </div>
+    
+    <div *ngIf="!tokenExists" class="alert alert-warning text-center mt-3">
+      <p>You are not logged in. Please log in to see your profile information.</p>
+    </div>
+  </div>
+  <button *ngIf="tokenExists" (click)="logout()" class="container d-flex justify-content-center w-50">Logout</button>

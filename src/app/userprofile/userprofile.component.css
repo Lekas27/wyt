@@ -1,0 +1,32 @@
+.profile-card {
+    background-color: white;
+    border: 2px solid gold; /* Gold border for a luxurious touch */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    max-width: 400px; /* Set a maximum width */
+    width: 100%; /* Ensure it takes full width of its parent up to max-width */
+    margin: 0 auto; /* Center the card */
+  }
+  
+  .profile-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .card-title {
+    color: gold; /* Gold color for the title */
+    font-weight: bold; /* Bold font weight */
+  }
+  
+  .card-body {
+    padding: 20px; /* Padding inside the card */
+  }
+  
+  .alert {
+    background-color: #f8c76b; /* Light gold background for alert */
+    border: none; /* No border */
+    color: #fff; /* White text color */
+    font-weight: bold; /* Bold text */
+  }
+  

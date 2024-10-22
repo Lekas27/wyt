@@ -1,0 +1,41 @@
+<div *ngIf="tokenExists" class="position-fixed top-0 end-0 m-3">
+  <button (click)="logout()">Logout</button>
+  <button><a routerLink="/createpost">Create post</a></button>
+</div>
+
+<div *ngIf="!tokenExists" class="position-fixed top-0 end-0 m-3">
+  <button>
+    <a class="text-white" routerLink="login">Want to login</a>
+  </button>
+</div>
+
+
+<div class="container my-5">
+
+  <div *ngIf="isLoading" class="text-center">
+    <div class="spinner-border text-gold" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <div *ngIf="!isLoading && posts.length > 0">
+    <div class="d-flex flex-column align-items-center">
+      <div *ngFor="let post of posts" class="bg-white rounded shadow-lg p-4 mb-4 border border-gold" style="max-width: 600px; width: 100%;">
+        <div class="post mb-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="username text-gold font-weight-bold">
+              {{ post.users_permissions_user?.username || 'Unknown User' }}
+            </div>
+          </div>
+          <h3 class="text-dark font-weight-bold mt-2">{{ post.article }}</h3>
+          <img class="mt-2 rounded border border-gold" 
+               [src]="post.image[0] ? 'http://localhost:1337' + post.image[0].url : 'assets/images/fallback-image.jpg'" 
+               alt="Article image" style="width: 100%; height: auto;"/>
+          <p class="text-muted my-1">
+            Published At: {{ post.publishedAt | date:'medium' }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

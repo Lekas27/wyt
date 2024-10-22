@@ -1,0 +1,26 @@
+.login-form {
+  background-color: white; /* White background for the form */
+  border-radius: 15px; /* Rounded corners for the form */
+  padding: 30px; /* Padding inside the form */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 400px; /* Maximum width of the form */
+  width: 100%; /* Ensure it takes full width of its parent up to max-width */
+}
+
+h2 {
+  color: gold; /* Gold color for the heading */
+}
+
+.btn-primary {
+  background-color: gold; /* Gold background for the button */
+  border-color: gold; /* Gold border for the button */
+}
+
+.btn-primary:hover {
+  background-color: #ffd700; /* Lighter gold on hover */
+  border-color: #ffd700; /* Lighter gold border on hover */
+}
+
+.text-danger {
+  font-size: 0.9rem; /* Slightly smaller font size for error messages */
+}

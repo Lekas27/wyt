@@ -1,0 +1,28 @@
+<div class="container mt-5 d-flex justify-content-center">
+  <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)" novalidate class="login-form">
+    <h2 class="text-center mb-4">Login</h2>
+
+    <div class="mb-3">
+      <label for="identifier" class="form-label">Username</label>
+      <input id="identifier" type="text" name="identifier" ngModel required class="form-control">
+      <div *ngIf="loginForm.submitted && !loginForm.controls['identifier']?.valid" class="text-danger">
+        Identifier is required
+      </div>
+    </div>
+    
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input id="password" type="password" name="password" ngModel required class="form-control">
+      <div *ngIf="loginForm.submitted && !loginForm.controls['password']?.valid" class="text-danger">
+        Password is required
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary w-100">Login</button>
+    
+
+  </form>
+  
+</div>
+<p class="text-center mt-3">You don't have an account?</p>
+<a href="register" class="text-center d-flex justify-content-center"><button>Register</button></a>
